@@ -1,0 +1,1 @@
+{"name":"Local: NFS","url":"c:\\Users\\Yash\\Desktop\\c+++\\compitative_Programming\\codechef\\NFS.cpp","tests":[{"id":1670640130969,"input":"3\n1 1 1 1\n2 1 1 1\n2 2 1 1","output":"Yes\nNo\nYes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\compitative_Programming\\codechef\\NFS.cpp","group":"local","local":true}
