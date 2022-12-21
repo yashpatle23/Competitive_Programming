@@ -13,7 +13,28 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    
+    int n;
+    cin>>n>>x;
+    int arr[n];
+    int total=0;
+    for(int i=0;i<n;i++) {
+        cin>>arr[i];
+    }
+    sort(arr,arr+n);
+    j=0;
+    for(int i=0;i<n;i++){
+        if(x>=arr[i]){
+            x-=arr[i];
+            j++;
+        }
+        else{
+            if(x>=(arr[i]+1)/2) 
+            j++;
+            break;
+        }
+    }
+    cout<<j<<endl;
+
 }
 signed main(){
     ios_base::sync_with_stdio(false);
