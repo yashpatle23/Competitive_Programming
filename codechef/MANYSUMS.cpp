@@ -3,25 +3,17 @@ using namespace std;
 int x,y,z;
 int i=0,j,k;
 #define ll long long
+ll mod=998244353;
 
+void yes(){ cout<<"YES"<<endl;}
+void no() { cout<<"NO"<<endl;}
 
 
 void ans(){
-   int n;
-   cin>>n;
-   int x1,y1,x2,y2;
-   cin>>x1>>y1>>x2>>y2;
-   i++;
-   int ans;
-   cout<<i<<" ";
-   
-    x=x2-x1;
-   y=y2-y1;
-       if(x<=y) ans=x+;
-   else ans=y+2;
-   if(ans<=x+y) cout<<ans<<endl;
-   else cout<<x+y<<endl;
- 
+    cin>>x>>y;
+    z=0;
+    for(int i=2*x;i<=2*y; i++) z++;
+    cout<<z<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

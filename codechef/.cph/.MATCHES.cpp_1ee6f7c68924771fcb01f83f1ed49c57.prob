@@ -1,0 +1,1 @@
+{"name":"Local: MATCHES","url":"c:\\Users\\Yash\\Desktop\\c+++\\compitative_Programming\\codechef\\MATCHES.cpp","tests":[{"id":1671080972540,"input":"3\n123 234\n10101 1010\n4 4","output":"13\n10\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\compitative_Programming\\codechef\\MATCHES.cpp","group":"local","local":true}

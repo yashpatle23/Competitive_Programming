@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int x,y,z;
+int i=0,j,k;
+#define ll long long
+ll mod=998244353;
+
+void yes(){ cout<<"YES"<<endl;}
+void no() { cout<<"NO"<<endl;}
+
+
+void ans(){
+    int a,b,c,d,k;
+    cin>>a>>b>>c>>d>>k;
+    int sum=0;
+    sum=abs(a-c)+abs(b-d);
+    if(k<sum) cout<<"NO"<<endl;
+    else {
+        int i=sum%2;
+        if(i==k%2) yes();
+        else no();
+    }
+}
+signed main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+
+    int t;
+    cin>>t;
+    while(t--) ans();
+    return 0;
+}

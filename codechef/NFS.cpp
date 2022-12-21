@@ -12,8 +12,8 @@ void ans(){
    ll max;
    if(u==v) max=v;
    else 
-   max=sqrt((v*v) -(2*a*s));
-   if(u<=max) cout<<"Yes"<<endl;
+   max=(u*u) -(2*a*s);
+   if((v*v)>=max) cout<<"Yes"<<endl;
    else cout<<"No"<<endl;
 }
 signed main(){
