@@ -14,12 +14,25 @@ void no() { cout<<"NO"<<endl;}
 
 void giver(){
     int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+     cin>>n;
+	 int a[n];
+	 for(int i=0;i<n;i++){
+	  cin>>a[i];
+	     
+	 }
+     int count=1;
+	  sort(a,a+n);
+	  for(int j=0;j<n-1;j++){
+	   if(abs(a[j]-a[j+1])>1){
+	       count=0;
+	       break;
+	   }
+	   else count=1;
+	   
+	      
+	  }
+	  if(count==1){cout<<"YES"<<endl;}
+	  else {cout<<"NO"<<endl;}
 }
 signed main(){
     ios_base::sync_with_stdio(false);

@@ -15,11 +15,14 @@ void no() { cout<<"NO"<<endl;}
 void giver(){
     int n;
     cin>>n>>x;
-    int arr[n];
+    int arr[n],brr[n];
     loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    loop(n) cin>>brr[i];
+    int total=0;
+    loop(n){
+        if(arr[i]>=x) total+=brr[i];
+    }
+    cout<<total<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

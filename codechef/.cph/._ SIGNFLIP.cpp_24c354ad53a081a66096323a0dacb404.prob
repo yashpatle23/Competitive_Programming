@@ -1,0 +1,1 @@
+{"name":"Local: _ SIGNFLIP","url":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\_ SIGNFLIP.cpp","tests":[{"id":1672674775254,"input":"3\n6 2\n6 -10 -1 0 -4 2\n5 0\n-1 -1 -1 -1 -1\n3 3\n1 2 3","output":"22\n0\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\_ SIGNFLIP.cpp","group":"local","local":true}

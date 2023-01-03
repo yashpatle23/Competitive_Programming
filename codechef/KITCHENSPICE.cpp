@@ -13,13 +13,10 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>x;
+    if(x<4) cout<<"MILD"<<endl;
+    else if(x<7) cout<<"MEDIUM"<<endl;
+    else cout<<"HOT"<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

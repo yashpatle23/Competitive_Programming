@@ -13,13 +13,8 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>x>>y;
+    cout<<abs(y-x)<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

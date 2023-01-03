@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int x,y,z;
+
 int j,k;
 #define ll long long
 #define loop(y) for (ll i = 0; i < y; i++)
@@ -14,12 +14,20 @@ void no() { cout<<"NO"<<endl;}
 
 void giver(){
     int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>n;
+    int x[n],y[n];
+    loop(n){
+        cin>>x[i]>>y[i];
+    }
+    sort(x,x+n);
+    sort(y,y+n);
+    j=2;
+    for(int i=1;i<n;i++){
+        if(x[i-1]!=x[i]) j++;
+        if(y[i-1]!=y[i]) j++;
+    }
+    cout<<j<<endl;
+
 }
 signed main(){
     ios_base::sync_with_stdio(false);

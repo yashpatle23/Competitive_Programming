@@ -56,4 +56,5 @@ void sortaa(int arr[],int n){
     qsort(arr,n,sizeof(int),cmpfunc);
     printf(" the sortaaed array is ");
     for(int i=0;i<n;i++) printf(" %d",arr[i]);
+    printf("\n");
 }

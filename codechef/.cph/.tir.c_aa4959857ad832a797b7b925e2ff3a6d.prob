@@ -1,0 +1,1 @@
+{"name":"Local: tir","url":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\tir.c","tests":[{"id":1672246948297,"input":"4\n10 20 30\n23 51 17\n44 21 21\n30 30 30","output":"YES\nNO\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\tir.c","group":"local","local":true}

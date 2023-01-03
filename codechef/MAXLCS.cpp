@@ -14,12 +14,18 @@ void no() { cout<<"NO"<<endl;}
 
 void giver(){
     int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>n;
+    string s;
+    char x[(n/2)],y[(n/2)];
+    cin>>s;
+    y=0;
+    int l=0;
+    loop(n/2){
+        x[i]=s[i];
+        y[i]=s[n-1-i];
+    }
+   
+    cout<<l<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

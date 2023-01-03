@@ -13,13 +13,21 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>x;
+    int arr[x],arr1[x];
+    loop(x) cin>>arr[i];
+    loop(x) cin>>arr1[i];
+    y=0;
+    j=0;
+    loop(x){
+        if(arr[i]!=0 && arr1[i]!=0) y++;
+        else {
+            j=max(j,y);
+            y=0;
+        }
+    }
+    j=max(j,y);
+    cout<<j<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);

@@ -1,0 +1,1 @@
+{"name":"Local: KITCHENSPICE","url":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\KITCHENSPICE.cpp","tests":[{"id":1671638596469,"input":"4\n4\n1\n6\n9","output":"MEDIUM\nMILD\nMEDIUM\nHOT"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\KITCHENSPICE.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: _ EZSPEAK","url":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\_ EZSPEAK.cpp","tests":[{"id":1671988869626,"input":"5\n5\napple\n15\nschtschurowskia\n6\npolish\n5\ntryst\n3\ncry","output":"YES\nNO\nYES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash\\Desktop\\c+++\\cp temp\\_ EZSPEAK.cpp","group":"local","local":true}

@@ -13,13 +13,29 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
+    char vowel[]={'a','e','i','o','u'};
     int n;
-    cin>>n>>x;
-    int arr[n];
-    loop(n) cin>>arr[i];
-    sort(arr,arr+n);
-    if(x>n) cout<<arr[n-1]<<endl;
-    else cout<<arr[x]<<endl;
+    cin>>n;
+    string str;
+    cin>>str;
+    int tem=0,flag=0;
+    loop(n){
+        flag=0;
+        if(tem==4) {
+            no();
+            return;
+        }
+        for(int j=0;j<5;j++){
+            if(str[i]==vowel[j]){
+
+    flag=1;
+                break;
+            }
+        }
+        if(flag==0) {tem++;}
+
+    }
+    yes();
 }
 signed main(){
     ios_base::sync_with_stdio(false);
