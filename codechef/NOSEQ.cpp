@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
 int j,k;
@@ -11,28 +11,26 @@ ll mod=998244353;
 void yes(){ cout<<"YES"<<endl;}
 void no() { cout<<"NO"<<endl;}
 
-
+ 
+ll log_a_to_base_b(int a, int b)
+{
+    return log(a) / log(b);
+}
 void giver(){
-    int n,k;
-    cin>>n>>k;
-    int arr[n];
-    string s;
-    cin>>s;
-    arr[0]=0;
-    int differ=0;
-    for(int i=1;i<n;i++){
-        if(s[i]!=s[i-1]) differ++;
-     
-        arr[i]=differ;
+
+    ll s,tem,n;
+    cin>>n>>k>>s;
+    int arr[n]={0};
+    for(int i=0;i<n;i++){
+        tem=log_a_to_base_b(s,k);
+       
+        arr[tem]=1;
+        s=s-pow(k,tem);
+        if(s==0) break;
     }
-    int out=arr[k-1];
-    if(s[k-1]=='0') out++;
-    loop(n-k){
-        int tem=arr[i+k]-arr[i+1];
-        if(s[i+k]=='0') tem++;
-        out=min(out,tem);
-    }
-    cout<<out<<endl;
+   if (s==0) {loop(n) cout<<arr[i]<<" ";}
+   else cout<<-2;
+    cout<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);
@@ -45,8 +43,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
-
-
-
-

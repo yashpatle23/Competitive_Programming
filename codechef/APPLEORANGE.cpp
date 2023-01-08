@@ -11,28 +11,18 @@ ll mod=998244353;
 void yes(){ cout<<"YES"<<endl;}
 void no() { cout<<"NO"<<endl;}
 
+int gcd(int a, int b)
+{
+    return b == 0 ? a : gcd(b, a % b);   
+}
 
 void giver(){
-    int n,k;
-    cin>>n>>k;
-    int arr[n];
-    string s;
-    cin>>s;
-    arr[0]=0;
-    int differ=0;
-    for(int i=1;i<n;i++){
-        if(s[i]!=s[i-1]) differ++;
-     
-        arr[i]=differ;
+    cin>>x>>y;
+    if(x==y) {
+        cout<<x<<endl;
+        return;
     }
-    int out=arr[k-1];
-    if(s[k-1]=='0') out++;
-    loop(n-k){
-        int tem=arr[i+k]-arr[i+1];
-        if(s[i+k]=='0') tem++;
-        out=min(out,tem);
-    }
-    cout<<out<<endl;
+    cout<<gcd(x,y)<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);
@@ -45,8 +35,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
-
-
-
-

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int j,k;
+int k=0;
 #define ll long long
 #define loop(y) for (ll i = 0; i < y; i++)
 ll mod=998244353;
@@ -13,26 +13,27 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    int n,k;
-    cin>>n>>k;
-    int arr[n];
-    string s;
-    cin>>s;
-    arr[0]=0;
-    int differ=0;
-    for(int i=1;i<n;i++){
-        if(s[i]!=s[i-1]) differ++;
-     
-        arr[i]=differ;
+    cin>>x;
+    
+    int a[3]={0};
+    a[0]=1;
+      
+       int n;
+       n=x;
+       int i=2;
+    while((i*i)<=x){
+        if(x%i==0 && (i!=(x/i))){
+            a[1]=i;
+            z=i;
+            break;
+        }
+       n/=i; 
     }
-    int out=arr[k-1];
-    if(s[k-1]=='0') out++;
-    loop(n-k){
-        int tem=arr[i+k]-arr[i+1];
-        if(s[i+k]=='0') tem++;
-        out=min(out,tem);
-    }
-    cout<<out<<endl;
+    a[2]=x/z;
+ 
+    if(a[1]!=0) loop(3) cout<<a[i]<<" ";
+    else cout<<-1;
+    cout<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);
@@ -45,8 +46,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
-
-
-
-

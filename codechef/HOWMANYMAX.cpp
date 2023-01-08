@@ -13,26 +13,20 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    int n,k;
-    cin>>n>>k;
-    int arr[n];
-    string s;
-    cin>>s;
-    arr[0]=0;
-    int differ=0;
-    for(int i=1;i<n;i++){
-        if(s[i]!=s[i-1]) differ++;
-     
-        arr[i]=differ;
-    }
-    int out=arr[k-1];
-    if(s[k-1]=='0') out++;
-    loop(n-k){
-        int tem=arr[i+k]-arr[i+1];
-        if(s[i+k]=='0') tem++;
-        out=min(out,tem);
-    }
-    cout<<out<<endl;
+    int n;
+    cin>>n;
+    string s ;
+    int c=0;
+
+     cin >>s;
+     for(int i =0 ;i<n-1;i++){
+        if(s[i]=='0' && s[i+1]=='1'){
+            c++;
+        }
+     }
+    if(s[0]=='1') c++;
+    if(s[n-2]=='0') c++;
+    cout<<c<<endl;
 }
 signed main(){
     ios_base::sync_with_stdio(false);
@@ -45,8 +39,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
-
-
-
-
