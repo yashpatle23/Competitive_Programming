@@ -13,23 +13,17 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
+    cin>>x;
+    while(x!=0){
+        int tem=x%10;
+        if(tem==7) {
+            yes();
+            return;
         }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
+        x/=10;
     }
+    no();
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

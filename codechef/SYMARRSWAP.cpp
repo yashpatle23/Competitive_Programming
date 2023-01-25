@@ -11,25 +11,19 @@ ll mod=998244353;
 void yes(){ cout<<"YES"<<endl;}
 void no() { cout<<"NO"<<endl;}
 
-
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll n ;
+    cin>>n;
+    vector (ll) a(n);
+    vector (ll) b(n);
+    loop(n) cin>>a[i];
+    loop(n) cin>>a[i];
+    
+
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

@@ -13,23 +13,8 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+    
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

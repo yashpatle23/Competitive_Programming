@@ -13,23 +13,23 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int n;
+    cin>>n;
+    vector <int> v(n);
+    loop(n) {
+        cin>>v[i];
+        if(v[i]<0) {
+            v[i]=v[i]*-1;
         }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
     }
+    int out=*min_element(v.begin(),v.end());
+    cout<<out-1<<endl;
+
+
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int j,k;
+
 #define ll long long
 #define loop(y) for (ll i = 0; i < y; i++)
 ll mod=998244353;
@@ -13,23 +13,23 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int n;
+    cin>>n;
+    int k=0;
+    int j=0;
+    vector <int> v(n);
+    loop(n) {
+        cin>>v[i];
+        if(v[i]==1) j++;
+        else k++;
     }
+    if(k%2==0) yes();
+    else no();
+
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

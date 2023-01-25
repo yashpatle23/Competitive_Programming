@@ -13,23 +13,24 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
+    int x1,y1,z2,y2;
+    std::cin >> x1>>y1>>z2>>y2;
+    int a=(x1*x1)+(y1*y1);
+    int b=(z2*z2)+(y2*y2);
+    if (a>b)
+    {
+        std::cout << "ALEX" << std::endl;
     }
+    else if  (a<b)
+    {
+        std::cout << "BOB" << std::endl;
+    }
+    else
+    {std::cout << "EQUAL" << std::endl;
 }
 
 
+}
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

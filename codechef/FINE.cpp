@@ -13,23 +13,17 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+    int a;
+std::cin >> a;
+if (a<=70)
+std::cout << "0" << std::endl;
+else if (a>70 && a<=100)
+std::cout << "500" << std::endl;
+else
+std::cout << "2000" << std::endl;
+
+
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

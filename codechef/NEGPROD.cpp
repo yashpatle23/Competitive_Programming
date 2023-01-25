@@ -13,23 +13,16 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+    int a,b,c;
+std::cin >> a>>b>>c;
+if ((a*b)<0 || (b*c)<0 || (c*a)<0 )
+{
+    cout<<"YES"<<endl;
+} else  {
+    cout<<"NO"<<endl;
 }
 
-
+}
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

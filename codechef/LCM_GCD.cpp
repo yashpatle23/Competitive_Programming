@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int x,y,z;
+long long x,y,z;
 int j,k;
 #define ll long long
 #define loop(y) for (ll i = 0; i < y; i++)
@@ -13,23 +13,14 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+    ll tem=__gcd(x,y);
+    cout<<x-tem<<endl;
+
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

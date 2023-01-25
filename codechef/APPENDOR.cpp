@@ -10,26 +10,35 @@ ll mod=998244353;
 
 void yes(){ cout<<"YES"<<endl;}
 void no() { cout<<"NO"<<endl;}
-
-
-void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
-    }
+int findOdd(int arr[], int n)
+{
+    int res = 0, i;
+    for (i = 0; i < n; i++)
+        res |= arr[i];
+    return res;
 }
 
+void giver(){
+    int n;
+    
+    cin>>n>>x;
+    int arr[n];
+    loop(n) cin>>arr[i];
+    int tem=findOdd(arr,n);
+    if(x-tem==0) cout<<0<<endl;
+    else{
+        int dif=x-tem;
+        loop(x+1){
+            if((dif|i)==x){
+                cout<<i+1<<endl;
+                return;
+            }
+        }
+        cout<<-1<<endl;
+       
+    }
 
+}
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

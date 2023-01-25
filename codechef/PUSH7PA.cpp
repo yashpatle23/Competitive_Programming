@@ -13,23 +13,21 @@ void no() { cout<<"NO"<<endl;}
 
 
 void giver(){
-    cin>>x>>y;
-    int l=0;
-    if(x==y) cout<<0<<endl;
-    else {
-        while(y%x!=0){
-            x/=2;
-            l++;
-        }
-        while(x!=y){
-            x*=2;
-            l++;
-        }
-        cout<<l<<endl;
+    int n;
+    cin>>n;
+    vector <int> v(n);
+    map<int,int> m;
+    loop(n) {
+        cin>>v[i];
+        m[v[i]]++;
     }
+    int ans=0;
+    for(auto i:m){
+        ans=max(ans,i.first+i.second-1);
+    }
+    cout<<ans<<endl;
+    
 }
-
-
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
