@@ -1,0 +1,1 @@
+{"name":"Local: MAX1XOR","url":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\MAX1XOR.cpp","tests":[{"id":1680705833233,"input":"3\n4\n0011\n4\n1100\n4\n1010","output":"3\n3\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\MAX1XOR.cpp","group":"local","local":true}

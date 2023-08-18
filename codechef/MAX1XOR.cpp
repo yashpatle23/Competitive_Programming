@@ -1,35 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int i=0,j,k;
-#define ll long long
-
-
-
-void ans(){
-   cin>>x>>y>>z;
-   int arr[3];
-   arr[0]=x+y;
-   arr[1]=x+z;
-   arr[2]=z+y;
-   cout<<*max_element(arr,arr+3)<<endl;
-}
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int t;
-    cin>>t;
-    while(t--) ans();
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int x,y,z;
 #define ll long long int
 #define int ll
 int j,k;
@@ -47,8 +18,26 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
-
+    int n; cin>>n;
+string str; cin>>str;
+int zero, one;
+zero=0, one=1;
+char x,y;
+x= '1', y='0';
+for(int i=1; i<n; i++){
+if(x!=str[i-1]){
+x='1'; one++;
+}
+else x='0';
+}
+for(int i=1; i<n; i++){
+if(y!=str[i-1]){
+y='1';
+zero++;
+}
+else y='0';
+}
+cout<<max(zero, one)<<endl;
 
 
 }

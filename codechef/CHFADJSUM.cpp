@@ -1,37 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int i=0,j,k;
-#define ll long long
-
-
-
-void ans(){
-   cin>>x>>y>>z;
-   int arr[3];
-   arr[0]=x+y;
-   arr[1]=x+z;
-   arr[2]=z+y;
-   cout<<*max_element(arr,arr+3)<<endl;
-}
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int t;
-    cin>>t;
-    while(t--) ans();
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int x,y,z;
 #define ll long long int
-#define int ll
+
 int j,k;
 #define loop(y) for (int i = 0; i < y; i++)
 int mod=998244353;
@@ -47,7 +18,28 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+   ll n; cin>>n;
+multiset<ll>st;
+vector<ll>v(n), tmp;
+for(ll i=0; i<n; i++) {
+cin>>v[i];
+st.insert(v[i]);
+}
+sort (v.begin(),v.end());
+ll zz=v[n-1]+v[n-2];
+tmp.push_back(v[n-1]);
+st.erase(st.find(v[n-1]));
+while(tmp.size() <n) {
+auto it = st.lower_bound(zz-tmp.back());
+if(it==st.begin()) {
+cout<<"NO"<<endl;
+return;
+}
+it--;
+tmp.push_back(*it);
+st.erase(it);
+}
+cout<<"YES"<<endl;
 
 
 

@@ -1,0 +1,1 @@
+{"name":"Local: EVALMAS","url":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\EVALMAS.cpp","tests":[{"id":1677077650462,"input":"3\n3 4\n2 -5\n3 0","output":"+++\n-1\n*-*"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\EVALMAS.cpp","group":"local","local":true}

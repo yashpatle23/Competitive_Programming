@@ -1,35 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int i=0,j,k;
-#define ll long long
-
-
-
-void ans(){
-   cin>>x>>y>>z;
-   int arr[3];
-   arr[0]=x+y;
-   arr[1]=x+z;
-   arr[2]=z+y;
-   cout<<*max_element(arr,arr+3)<<endl;
-}
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int t;
-    cin>>t;
-    while(t--) ans();
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int x,y,z;
 #define ll long long int
 #define int ll
 int j,k;
@@ -41,13 +12,27 @@ int mod=998244353;
 
 void yes() {char yes[] = {'Y', 'E', 'S'}; loop(3) cout << yes[i]; cout << endl;}
 void no() {char no[] = {'N', 'O'}; loop(2) cout << no[i]; cout << endl;}
-
+bool hasLoveTriangle(vector<int> &f) {
+    int n = f.size();
+    for (int i = 1; i <= n; i++) {
+        int j = f[i-1];
+        if (f[j-1] == i-1) {
+            return true;
+        }
+    }
+    return false;
+}
 
 void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+    int n;
+    cin>>n;
+    vector<int> f(n);
+    loop(n) cin>>f[i];
+    if(hasLoveTriangle(f)) yes();
+    else no();
 
 
 
@@ -56,9 +41,6 @@ signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-
-    int t;
-    cin>>t;
-    while(t--) giver();
+ giver();
     return 0;
 }

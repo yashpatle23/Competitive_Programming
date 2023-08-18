@@ -1,0 +1,1 @@
+{"name":"Local: FIND_X","url":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\FIND_X.cpp","tests":[{"id":1679499117438,"input":"3\n4 7 4 8\n5 1 8 2\n3 2 4 3","output":"1\n2\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\FIND_X.cpp","group":"local","local":true}

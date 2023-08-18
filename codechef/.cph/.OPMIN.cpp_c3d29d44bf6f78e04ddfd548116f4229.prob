@@ -1,0 +1,1 @@
+{"name":"Local: OPMIN","url":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\OPMIN.cpp","tests":[{"id":1679495489889,"input":"3\n2\n1 2\n4\n2 2 3 4\n1\n1","output":"1\n2\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\OPMIN.cpp","group":"local","local":true}

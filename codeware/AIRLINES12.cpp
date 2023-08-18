@@ -1,35 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int i=0,j,k;
-#define ll long long
-
-
-
-void ans(){
-   cin>>x>>y>>z;
-   int arr[3];
-   arr[0]=x+y;
-   arr[1]=x+z;
-   arr[2]=z+y;
-   cout<<*max_element(arr,arr+3)<<endl;
-}
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int t;
-    cin>>t;
-    while(t--) ans();
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int x,y,z;
 #define ll long long int
 #define int ll
 int j,k;
@@ -47,7 +18,33 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+    	int n, x, y;
+    cin >> n >> x >> y;
+
+    int a[n], b[n];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+    }
+
+    int max_tip = 0;
+    for (int i = 0; i < n; i++) {
+        int tip = 0;
+        if (a[i] > b[i] && x > 0) {
+            tip += a[i];
+            x--;
+        } else if (b[i] > a[i] && y > 0) {
+            tip += b[i];
+            y--;
+        } else {
+            tip += max(a[i], b[i]);
+        }
+        max_tip += tip;
+    }
+
+    cout << max_tip << endl;
 
 
 
@@ -57,8 +54,7 @@ signed main(){
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int t;
-    cin>>t;
-    while(t--) giver();
+    
+   giver();
     return 0;
 }

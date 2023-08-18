@@ -1,35 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
-int i=0,j,k;
-#define ll long long
-
-
-
-void ans(){
-   cin>>x>>y>>z;
-   int arr[3];
-   arr[0]=x+y;
-   arr[1]=x+z;
-   arr[2]=z+y;
-   cout<<*max_element(arr,arr+3)<<endl;
-}
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int t;
-    cin>>t;
-    while(t--) ans();
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int x,y,z;
 #define ll long long int
 #define int ll
 int j,k;
@@ -47,10 +18,37 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
+    int n;
+    cin >> n;
+
+    vector<vector<int>> matrix(n, vector<int>(n, 0));
+    matrix[0][0] = 1;
+
+    for (int i = 1; i < n; i++) {
+        matrix[i][0] = 1 - matrix[i-1][0];
+    }
+
+    for (int j = 1; j < n; j++) {
+        matrix[0][j] = 1 - matrix[0][j-1];
+    }
+
+    for (int i = 1; i < n; i++) {
+        for (int j = 1; j < n; j++) {
+            if (matrix[i-1][j] == matrix[i][j-1]) {
+                cout << -1 << endl;
+                return ;
+            }
+            matrix[i][j] = 1 - matrix[i-1][j];
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
     
-
-
-
 }
 signed main(){
     ios_base::sync_with_stdio(false);
@@ -62,3 +60,5 @@ signed main(){
     while(t--) giver();
     return 0;
 }
+
+
