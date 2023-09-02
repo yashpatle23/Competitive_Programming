@@ -1,5 +1,3 @@
-
-
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
@@ -20,18 +18,26 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    map<int,int> m;
-    int n;
-    cin>>n;
-    vector<int> arr(n);
+    int n,m;
+    cin>>n>>m;
+    string s;
+    cin>>s;
+    int flag=0;
+    int  ans=0,tem=0;
     loop(n){
-        cin>>arr[i];
-        m[arr[i]]++;
-    }
-    sort(arr.begin(),arr.end());
-    int ans=0;
-    for(auto i:m){
-        ans+=i.second-1;
+      
+        if(s[i]=='1'){
+            if(flag) {
+                flag=0;
+                tem=0;
+                }
+            else {
+                tem=0;
+                flag=1;
+            }
+        }
+        else tem++;
+          if(tem==m) {ans+=1;tem=0;}
     }
     cout<<ans<<endl;
 
