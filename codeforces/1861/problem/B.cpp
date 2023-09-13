@@ -1,3 +1,5 @@
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
@@ -18,7 +20,17 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+    string s1,s2;
+    cin>>s1>>s2;
+    int n=s1.length();
+
+    for(int i=0;i<n-1;i++){
+        if(s1[i]=='0' and s2[i]=='0' and s1[i+1]=='1' and s2[i+1]=='1' ){
+            yes();
+            return;
+        }
+    }
+    no();
 
 
 

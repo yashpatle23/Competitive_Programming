@@ -1,3 +1,5 @@
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
@@ -18,6 +20,21 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
+    int n;
+    cin>>n;
+    while(n/100!=0){
+        int temp=n%10;
+        if(temp==7) {
+            cout<<17<<endl;
+            return;
+        }
+        else if(temp==1){
+            cout<<71<<endl;
+            return;
+        }
+        n/=10;
+    }
+    cout<<n<<endl;
     
 
 
