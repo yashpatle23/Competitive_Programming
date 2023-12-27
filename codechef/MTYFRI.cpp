@@ -20,15 +20,40 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n, m;
-    cin>>n;
-    cin>>m;
-int ans=ceil(static_cast<double> (n)/ (m + 1));
-if (m>=n- 1) {
-    cout << 1 << endl;
-} else {
-cout << max(n - 2 *m, ans) << endl;
-}
+    int n,k;
+    cin>>n>>k;
+    vector<int> arr(n);
+    vector<int> m,t;
+    int summ=0,sumt=0;
+    loop(n){
+        cin>>arr[i];
+        if(i%2==0) {
+            m.push_back(arr[i]);
+            summ+=arr[i];
+        }
+        else {
+            t.push_back(arr[i]);
+            sumt+=arr[i];
+        
+        }
+    }
+    sort(t.begin(),t.end());
+    sort(m.begin(),m.end(),greater<int>());
+    for(int i=0; i<k && i<t.size(); i++){
+        
+        if(summ>=sumt){
+            summ-=m[i];
+            summ+=t[i];
+            sumt-=t[i];
+            sumt+=m[i];
+        }
+        else{
+            yes();
+            return;
+        }
+    }
+    if(summ>=sumt) no();
+    else yes();
 
 
 }
@@ -42,4 +67,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
