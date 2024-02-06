@@ -11,3 +11,5 @@ while(right<n):
     else:
         right+=1
 print(tatal)
+
+

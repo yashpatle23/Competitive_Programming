@@ -1,0 +1,1 @@
+{"name":"Local: DECREM","url":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\DECREM.cpp","tests":[{"id":1705906256137,"input":"2\n4 6\n1 2","output":"6\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Yash_MSI\\Desktop\\c-\\Competitive_Programming\\codechef\\DECREM.cpp","group":"local","local":true}

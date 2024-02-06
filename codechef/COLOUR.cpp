@@ -20,37 +20,36 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    char arr[n];
+    int x,y,z;
+    cin>>x>>y>>z;
+    int count=0;
+    vector <int> v={x,y,z};
+    sort(v.begin(),v.end(),greater<int>());
+    loop(3){
+        if(v[i]>0) {
+            count++;
+            v[i]--;
+        }
+        else break;
+        
+    }
+    if(v[0]>0 && v[1]>0){
+        v[0]--;
+        v[1]--;
+        count++;
+    }
+    if(v[0]>0 && v[2]>0){
+        v[0]--;
+        v[2]--;
+        count++;
+    }
+    if(v[1]>0 && v[2]>0){
+        v[1]--;
+        v[2]--;
+        count++;
+    }
+    cout<<count<<endl;
     
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-   
-    int roundsToWin = ((n) / 2)+1;
-
-    for(int i=0;i<n-roundsToWin;i++){
-        cout<<'P';
-        if(arr[i]=='R') roundsToWin--;
-    }
-
-
-    for(int i=n-roundsToWin;i<n;i++)    {
-                if (arr[i] == 'R') {
-                cout << "P";
-                
-            } else if (arr[i] == 'P') {
-                cout << "S";
-                
-            } else if (arr[i] == 'S') {
-                cout << "R";
-                
-            }
-    }
-    
-    cout << endl;
-
 
 
 
@@ -65,4 +64,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-

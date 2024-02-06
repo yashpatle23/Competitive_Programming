@@ -21,36 +21,30 @@ void giver(){
     cin.tie(NULL);
     cout.tie(NULL);
     int n;
-    cin >> n;
-    char arr[n];
-    
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    cin>>n;
+    vector <int> v;
+    int sum=0;
+    loop(n){
+        cin>>x;
+        sum+=x;
+        v.push_back(x);
     }
-   
-    int roundsToWin = ((n) / 2)+1;
-
-    for(int i=0;i<n-roundsToWin;i++){
-        cout<<'P';
-        if(arr[i]=='R') roundsToWin--;
+    vector <int> vec1,vec2;
+    vec1.push_back(0);
+    vec2.push_back(sum);
+    for(int i=0; i<n; i++){
+        vec1.push_back(vec1[i]+v[i]);
+        vec2.push_back(vec2[i]-v[i]);
+        
+    }
+    vector <int> ans;
+    loop(n+1){
+        ans.push_back(abs(vec1[i]-vec2[i]));
+        
     }
 
-
-    for(int i=n-roundsToWin;i<n;i++)    {
-                if (arr[i] == 'R') {
-                cout << "P";
-                
-            } else if (arr[i] == 'P') {
-                cout << "S";
-                
-            } else if (arr[i] == 'S') {
-                cout << "R";
-                
-            }
-    }
-    
-    cout << endl;
-
+    int maxElementIndex = std::min_element(ans.begin(),ans.end()) - ans.begin();
+    cout<<max(vec1[maxElementIndex],vec2[maxElementIndex])<<endl;
 
 
 
@@ -65,4 +59,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-

@@ -20,37 +20,21 @@ void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    char arr[n];
-    
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-   
-    int roundsToWin = ((n) / 2)+1;
-
-    for(int i=0;i<n-roundsToWin;i++){
-        cout<<'P';
-        if(arr[i]=='R') roundsToWin--;
-    }
-
-
-    for(int i=n-roundsToWin;i<n;i++)    {
-                if (arr[i] == 'R') {
-                cout << "P";
-                
-            } else if (arr[i] == 'P') {
-                cout << "S";
-                
-            } else if (arr[i] == 'S') {
-                cout << "R";
-                
-            }
-    }
-    
-    cout << endl;
-
+    char s [6];
+bool hat = false;
+// Input s for each ball
+for (int i = 0; i < 6; i++) {
+cin>> s[i];
+}
+// Check for hat I
+for (int i = 0; i < 4; i++) {
+if (s[i] == 'W' && s [i+1] == 'W' && s [i + 2] == 'W') {
+hat = true;
+break;
+}
+}
+if(hat) cout<<"YES"<<endl;
+else cout<<"NO"<<endl;
 
 
 
@@ -65,4 +49,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-

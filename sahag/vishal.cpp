@@ -21,36 +21,35 @@ void giver(){
     cin.tie(NULL);
     cout.tie(NULL);
     int n;
-    cin >> n;
-    char arr[n];
-    
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    cin>>n;
+    int t=((n+1)*n)/2;
+    int as=1;
+    int tem=0;
+    vector <vector <int>>  vec;
+    for(int i=0; i<n;i++){
+        vector<int> v;
+        v.push_back(as);
+        as++;
+        vec.push_back(v);
     }
-   
-    int roundsToWin = ((n) / 2)+1;
-
-    for(int i=0;i<n-roundsToWin;i++){
-        cout<<'P';
-        if(arr[i]=='R') roundsToWin--;
-    }
-
-
-    for(int i=n-roundsToWin;i<n;i++)    {
-                if (arr[i] == 'R') {
-                cout << "P";
-                
-            } else if (arr[i] == 'P') {
-                cout << "S";
-                
-            } else if (arr[i] == 'S') {
-                cout << "R";
-                
+    for(int i =n-1; i>0; i--){
+        for(int j=0; j<i; j++){
+            if(tem%2==0){
+                vec[n-1-j].push_back(as);
+            as++;
             }
+            else{
+                vec[n-i+j].push_back(as);
+            as++;}
+        }
+        tem++;
     }
-    
-    cout << endl;
-
+    for(auto a: vec){
+        for(auto b: a){
+            cout<<b<<" ";
+        }
+        cout<<endl;
+    }
 
 
 
@@ -60,9 +59,6 @@ signed main(){
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int t;
-    cin>>t;
-    while(t--) giver();
+    giver();
     return 0;
 }
-

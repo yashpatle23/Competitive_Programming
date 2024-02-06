@@ -7,7 +7,7 @@ int j,k;
 #define loop(y) for (int i = 0; i < y; i++)
 int mod=998244353;
 // *min_element(arr, arr + n);  *max_element(arr, arr + n);
-//maxElementIndex = std::max_element(v.begin(),v.end()) - v.begin();
+//maxElementIndex = std::max_element(v.begin(),v.end()) - v`.begin();
 //__gcd(x,y) lcm=x*y/__gcd(x,y)
 //sort(arr, arr + n, greater<T>());  reverse sort
 
@@ -15,41 +15,36 @@ int mod=998244353;
 void yes() {char yes[] = {'Y', 'E', 'S'}; loop(3) cout << yes[i]; cout << endl;}
 void no() {char no[] = {'N', 'O'}; loop(2) cout << no[i]; cout << endl;}
 
-
+void un(){
+    cout<<"UNFIT"<<endl;
+}
 void giver(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    char arr[n];
-    
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+     int n;
+    cin>>n;
+    vector <int> v(n);
+    loop(n) cin>>v[i];
+    vector <int> vd;
+    // if(n==1){
+    //     un();
+    //     return;
+    // }
+    // loop(n-1){
+    //     vd.push_back(*max_element(v.begin()+i,v.end())-v[i]);
+    // }
+    // int maxd=*max_element(vd.begin(),vd.end());
+    // if(maxd<=0) {un();}
+    // else cout<<maxd<<endl;
+    int maxd=INT_MIN;
+    int mini=0;
+    loop(n){
+        if(v[i]<v[mini]) mini=i;
+        if(i!=mini) maxd=max(maxd,v[i]-v[mini]);
     }
-   
-    int roundsToWin = ((n) / 2)+1;
-
-    for(int i=0;i<n-roundsToWin;i++){
-        cout<<'P';
-        if(arr[i]=='R') roundsToWin--;
-    }
-
-
-    for(int i=n-roundsToWin;i<n;i++)    {
-                if (arr[i] == 'R') {
-                cout << "P";
-                
-            } else if (arr[i] == 'P') {
-                cout << "S";
-                
-            } else if (arr[i] == 'S') {
-                cout << "R";
-                
-            }
-    }
-    
-    cout << endl;
+    if(maxd<=0) un();
+    else cout<<maxd<<endl;
 
 
 
@@ -65,4 +60,3 @@ signed main(){
     while(t--) giver();
     return 0;
 }
-
